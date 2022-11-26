@@ -83,6 +83,7 @@ public class RestApiTests {
                 .then()
                 .statusCode(200)
                 .body("data.email", hasItems("michael.lawson@reqres.in", "lindsay.ferguson@reqres.in", "george.edwards@reqres.in"),
+                        "data[0].email", is("michael.lawson@reqres.in"),
                         "data.first_name", hasItems("Lindsay"),
                         "total_pages", is(2));
     }
