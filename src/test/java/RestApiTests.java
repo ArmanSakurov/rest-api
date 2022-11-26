@@ -22,7 +22,7 @@ public class RestApiTests {
                 .then()
                 .log().status()
                 .log().body()
-                .statusCode(200) // OK
+                .statusCode(200)
                 .body("data.first_name", is("Janet"))
                 .body("data.last_name", is("Weaver"))
                 .body("data.email", is("janet.weaver@reqres.in"));
